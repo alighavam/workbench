@@ -1236,6 +1236,454 @@ PaletteFile::addDefaultPalettes()
         addPalette(magma);
     }
 
+    //matplotlib's viridis, approximated by reducing their massive 256-entry lookup table to 32 entries
+    //Copyright (c) 2012-2015 Matplotlib Development Team; All Rights Reserved
+    //see https://github.com/matplotlib/matplotlib/blob/master/LICENSE/LICENSE or debian/copyright for the matplotlib license, "All Rights Reserved" is required language by the license, but it is actually open source
+    if (this->getPaletteByName("viridis") == NULL) {
+        Palette viridis;
+        viridis.setName("viridis");
+        this->addColor("viridis-black", 68, 1, 84);//negative and zero
+        this->addColor("viridis-1", 68, 1, 84);
+        this->addColor("viridis-2", 70, 12, 95);
+        this->addColor("viridis-3", 71, 24, 106);
+        this->addColor("viridis-4", 72, 34, 115);
+        this->addColor("viridis-5", 70, 45, 124);
+        this->addColor("viridis-6", 68, 55, 129);
+        this->addColor("viridis-7", 65, 65, 134);
+        this->addColor("viridis-8", 61, 74, 137);
+        this->addColor("viridis-9", 57, 84, 139);
+        this->addColor("viridis-10", 53, 92, 140);
+        this->addColor("viridis-11", 49, 100, 141);
+        this->addColor("viridis-12", 46, 108, 142);
+        this->addColor("viridis-13", 42, 117, 142);
+        this->addColor("viridis-14", 39, 124, 142);
+        this->addColor("viridis-15", 36, 132, 141);
+        this->addColor("viridis-16", 34, 139, 141);
+        this->addColor("viridis-17", 31, 148, 139);
+        this->addColor("viridis-18", 30, 155, 137);
+        this->addColor("viridis-19", 31, 163, 134);
+        this->addColor("viridis-20", 36, 170, 130);
+        this->addColor("viridis-21", 46, 178, 124);
+        this->addColor("viridis-22", 57, 185, 118);
+        this->addColor("viridis-23", 71, 192, 110);
+        this->addColor("viridis-24", 87, 198, 101);
+        this->addColor("viridis-25", 107, 205, 89);
+        this->addColor("viridis-26", 126, 210, 78);
+        this->addColor("viridis-27", 146, 215, 65);
+        this->addColor("viridis-28", 167, 219, 51);
+        this->addColor("viridis-29", 191, 223, 36);
+        this->addColor("viridis-30", 212, 225, 26);
+        this->addColor("viridis-31", 233, 228, 25);
+        this->addColor("viridis-32", 253, 231, 36);
+        viridis.addScalarAndColor(32.0f / 32.0f, "viridis-32");
+        viridis.addScalarAndColor(31.0f / 32.0f, "viridis-31");
+        viridis.addScalarAndColor(30.0f / 32.0f, "viridis-30");
+        viridis.addScalarAndColor(29.0f / 32.0f, "viridis-29");
+        viridis.addScalarAndColor(28.0f / 32.0f, "viridis-28");
+        viridis.addScalarAndColor(27.0f / 32.0f, "viridis-27");
+        viridis.addScalarAndColor(26.0f / 32.0f, "viridis-26");
+        viridis.addScalarAndColor(25.0f / 32.0f, "viridis-25");
+        viridis.addScalarAndColor(24.0f / 32.0f, "viridis-24");
+        viridis.addScalarAndColor(23.0f / 32.0f, "viridis-23");
+        viridis.addScalarAndColor(22.0f / 32.0f, "viridis-22");
+        viridis.addScalarAndColor(21.0f / 32.0f, "viridis-21");
+        viridis.addScalarAndColor(20.0f / 32.0f, "viridis-20");
+        viridis.addScalarAndColor(19.0f / 32.0f, "viridis-19");
+        viridis.addScalarAndColor(18.0f / 32.0f, "viridis-18");
+        viridis.addScalarAndColor(17.0f / 32.0f, "viridis-17");
+        viridis.addScalarAndColor(16.0f / 32.0f, "viridis-16");
+        viridis.addScalarAndColor(15.0f / 32.0f, "viridis-15");
+        viridis.addScalarAndColor(14.0f / 32.0f, "viridis-14");
+        viridis.addScalarAndColor(13.0f / 32.0f, "viridis-13");
+        viridis.addScalarAndColor(12.0f / 32.0f, "viridis-12");
+        viridis.addScalarAndColor(11.0f / 32.0f, "viridis-11");
+        viridis.addScalarAndColor(10.0f / 32.0f, "viridis-10");
+        viridis.addScalarAndColor(9.0f / 32.0f, "viridis-9");
+        viridis.addScalarAndColor(8.0f / 32.0f, "viridis-8");
+        viridis.addScalarAndColor(7.0f / 32.0f, "viridis-7");
+        viridis.addScalarAndColor(6.0f / 32.0f, "viridis-6");
+        viridis.addScalarAndColor(5.0f / 32.0f, "viridis-5");
+        viridis.addScalarAndColor(4.0f / 32.0f, "viridis-4");
+        viridis.addScalarAndColor(3.0f / 32.0f, "viridis-3");
+        viridis.addScalarAndColor(2.0f / 32.0f, "viridis-2");
+        viridis.addScalarAndColor(1.0f / 32.0f, "viridis-1");
+        viridis.addScalarAndColor(0.0f, "viridis-black");
+        viridis.addScalarAndColor(-1.0f, "viridis-black");
+        addPalette(viridis);
+    }
+
+    //matplotlib plasma, 32-entry LUT
+    //Copyright (c) 2012-2015 Matplotlib Development Team; All Rights Reserved
+    if (this->getPaletteByName("plasma") == NULL) {
+        Palette plasma;
+        plasma.setName("plasma");
+        this->addColor("plasma-black", 12, 7, 134);//negative and zero
+        this->addColor("plasma-1", 12, 7, 134);
+        this->addColor("plasma-2", 33, 5, 143);
+        this->addColor("plasma-3", 49, 4, 150);
+        this->addColor("plasma-4", 63, 3, 156);
+        this->addColor("plasma-5", 78, 2, 161);
+        this->addColor("plasma-6", 90, 0, 165);
+        this->addColor("plasma-7", 103, 0, 167);
+        this->addColor("plasma-8", 115, 0, 168);
+        this->addColor("plasma-9", 129, 4, 167);
+        this->addColor("plasma-10", 140, 10, 164);
+        this->addColor("plasma-11", 151, 19, 160);
+        this->addColor("plasma-12", 162, 28, 154);
+        this->addColor("plasma-13", 173, 38, 146);
+        this->addColor("plasma-14", 182, 47, 139);
+        this->addColor("plasma-15", 190, 56, 131);
+        this->addColor("plasma-16", 198, 65, 124);
+        this->addColor("plasma-17", 207, 75, 116);
+        this->addColor("plasma-18", 214, 85, 109);
+        this->addColor("plasma-19", 220, 94, 102);
+        this->addColor("plasma-20", 227, 103, 95);
+        this->addColor("plasma-21", 233, 114, 87);
+        this->addColor("plasma-22", 238, 124, 80);
+        this->addColor("plasma-23", 243, 134, 73);
+        this->addColor("plasma-24", 246, 145, 66);
+        this->addColor("plasma-25", 250, 157, 58);
+        this->addColor("plasma-26", 252, 169, 52);
+        this->addColor("plasma-27", 253, 181, 45);
+        this->addColor("plasma-28", 253, 193, 40);
+        this->addColor("plasma-29", 251, 208, 36);
+        this->addColor("plasma-30", 248, 221, 36);
+        this->addColor("plasma-31", 244, 234, 38);
+        this->addColor("plasma-32", 239, 248, 33);
+        plasma.addScalarAndColor(32.0f / 32.0f, "plasma-32");
+        plasma.addScalarAndColor(31.0f / 32.0f, "plasma-31");
+        plasma.addScalarAndColor(30.0f / 32.0f, "plasma-30");
+        plasma.addScalarAndColor(29.0f / 32.0f, "plasma-29");
+        plasma.addScalarAndColor(28.0f / 32.0f, "plasma-28");
+        plasma.addScalarAndColor(27.0f / 32.0f, "plasma-27");
+        plasma.addScalarAndColor(26.0f / 32.0f, "plasma-26");
+        plasma.addScalarAndColor(25.0f / 32.0f, "plasma-25");
+        plasma.addScalarAndColor(24.0f / 32.0f, "plasma-24");
+        plasma.addScalarAndColor(23.0f / 32.0f, "plasma-23");
+        plasma.addScalarAndColor(22.0f / 32.0f, "plasma-22");
+        plasma.addScalarAndColor(21.0f / 32.0f, "plasma-21");
+        plasma.addScalarAndColor(20.0f / 32.0f, "plasma-20");
+        plasma.addScalarAndColor(19.0f / 32.0f, "plasma-19");
+        plasma.addScalarAndColor(18.0f / 32.0f, "plasma-18");
+        plasma.addScalarAndColor(17.0f / 32.0f, "plasma-17");
+        plasma.addScalarAndColor(16.0f / 32.0f, "plasma-16");
+        plasma.addScalarAndColor(15.0f / 32.0f, "plasma-15");
+        plasma.addScalarAndColor(14.0f / 32.0f, "plasma-14");
+        plasma.addScalarAndColor(13.0f / 32.0f, "plasma-13");
+        plasma.addScalarAndColor(12.0f / 32.0f, "plasma-12");
+        plasma.addScalarAndColor(11.0f / 32.0f, "plasma-11");
+        plasma.addScalarAndColor(10.0f / 32.0f, "plasma-10");
+        plasma.addScalarAndColor(9.0f / 32.0f, "plasma-9");
+        plasma.addScalarAndColor(8.0f / 32.0f, "plasma-8");
+        plasma.addScalarAndColor(7.0f / 32.0f, "plasma-7");
+        plasma.addScalarAndColor(6.0f / 32.0f, "plasma-6");
+        plasma.addScalarAndColor(5.0f / 32.0f, "plasma-5");
+        plasma.addScalarAndColor(4.0f / 32.0f, "plasma-4");
+        plasma.addScalarAndColor(3.0f / 32.0f, "plasma-3");
+        plasma.addScalarAndColor(2.0f / 32.0f, "plasma-2");
+        plasma.addScalarAndColor(1.0f / 32.0f, "plasma-1");
+        plasma.addScalarAndColor(0.0f, "plasma-black");
+        plasma.addScalarAndColor(-1.0f, "plasma-black");
+        addPalette(plasma);
+    }
+
+    //matplotlib inferno, 32-entry LUT
+    //Copyright (c) 2012-2015 Matplotlib Development Team; All Rights Reserved
+    if (this->getPaletteByName("inferno") == NULL) {
+        Palette inferno;
+        inferno.setName("inferno");
+        this->addColor("inferno-black", 0, 0, 3);//negative and zero
+        this->addColor("inferno-1", 0, 0, 3);
+        this->addColor("inferno-2", 3, 2, 18);
+        this->addColor("inferno-3", 10, 7, 35);
+        this->addColor("inferno-4", 20, 11, 54);
+        this->addColor("inferno-5", 34, 11, 76);
+        this->addColor("inferno-6", 48, 10, 92);
+        this->addColor("inferno-7", 62, 9, 102);
+        this->addColor("inferno-8", 75, 12, 107);
+        this->addColor("inferno-9", 90, 17, 109);
+        this->addColor("inferno-10", 102, 21, 110);
+        this->addColor("inferno-11", 115, 26, 109);
+        this->addColor("inferno-12", 128, 31, 107);
+        this->addColor("inferno-13", 142, 36, 104);
+        this->addColor("inferno-14", 155, 40, 100);
+        this->addColor("inferno-15", 167, 45, 95);
+        this->addColor("inferno-16", 180, 51, 88);
+        this->addColor("inferno-17", 193, 58, 80);
+        this->addColor("inferno-18", 204, 65, 72);
+        this->addColor("inferno-19", 214, 74, 63);
+        this->addColor("inferno-20", 223, 84, 54);
+        this->addColor("inferno-21", 232, 97, 43);
+        this->addColor("inferno-22", 239, 109, 33);
+        this->addColor("inferno-23", 244, 122, 22);
+        this->addColor("inferno-24", 248, 136, 12);
+        this->addColor("inferno-25", 251, 153, 6);
+        this->addColor("inferno-26", 251, 168, 13);
+        this->addColor("inferno-27", 251, 183, 28);
+        this->addColor("inferno-28", 249, 199, 47);
+        this->addColor("inferno-29", 245, 217, 72);
+        this->addColor("inferno-30", 241, 232, 100);
+        this->addColor("inferno-31", 242, 244, 133);
+        this->addColor("inferno-32", 252, 254, 164);
+        inferno.addScalarAndColor(32.0f / 32.0f, "inferno-32");
+        inferno.addScalarAndColor(31.0f / 32.0f, "inferno-31");
+        inferno.addScalarAndColor(30.0f / 32.0f, "inferno-30");
+        inferno.addScalarAndColor(29.0f / 32.0f, "inferno-29");
+        inferno.addScalarAndColor(28.0f / 32.0f, "inferno-28");
+        inferno.addScalarAndColor(27.0f / 32.0f, "inferno-27");
+        inferno.addScalarAndColor(26.0f / 32.0f, "inferno-26");
+        inferno.addScalarAndColor(25.0f / 32.0f, "inferno-25");
+        inferno.addScalarAndColor(24.0f / 32.0f, "inferno-24");
+        inferno.addScalarAndColor(23.0f / 32.0f, "inferno-23");
+        inferno.addScalarAndColor(22.0f / 32.0f, "inferno-22");
+        inferno.addScalarAndColor(21.0f / 32.0f, "inferno-21");
+        inferno.addScalarAndColor(20.0f / 32.0f, "inferno-20");
+        inferno.addScalarAndColor(19.0f / 32.0f, "inferno-19");
+        inferno.addScalarAndColor(18.0f / 32.0f, "inferno-18");
+        inferno.addScalarAndColor(17.0f / 32.0f, "inferno-17");
+        inferno.addScalarAndColor(16.0f / 32.0f, "inferno-16");
+        inferno.addScalarAndColor(15.0f / 32.0f, "inferno-15");
+        inferno.addScalarAndColor(14.0f / 32.0f, "inferno-14");
+        inferno.addScalarAndColor(13.0f / 32.0f, "inferno-13");
+        inferno.addScalarAndColor(12.0f / 32.0f, "inferno-12");
+        inferno.addScalarAndColor(11.0f / 32.0f, "inferno-11");
+        inferno.addScalarAndColor(10.0f / 32.0f, "inferno-10");
+        inferno.addScalarAndColor(9.0f / 32.0f, "inferno-9");
+        inferno.addScalarAndColor(8.0f / 32.0f, "inferno-8");
+        inferno.addScalarAndColor(7.0f / 32.0f, "inferno-7");
+        inferno.addScalarAndColor(6.0f / 32.0f, "inferno-6");
+        inferno.addScalarAndColor(5.0f / 32.0f, "inferno-5");
+        inferno.addScalarAndColor(4.0f / 32.0f, "inferno-4");
+        inferno.addScalarAndColor(3.0f / 32.0f, "inferno-3");
+        inferno.addScalarAndColor(2.0f / 32.0f, "inferno-2");
+        inferno.addScalarAndColor(1.0f / 32.0f, "inferno-1");
+        inferno.addScalarAndColor(0.0f, "inferno-black");
+        inferno.addScalarAndColor(-1.0f, "inferno-black");
+        addPalette(inferno);
+    }
+
+    //Crameri berlin diverging colormap (Fabio Crameri scientific colour maps, MIT license)
+    if (this->getPaletteByName("berlin") == NULL) {
+        Palette berlin;
+        berlin.setName("berlin");
+        this->addColor("berlin-0", 158, 175, 254);
+        this->addColor("berlin-1", 139, 173, 246);
+        this->addColor("berlin-2", 120, 171, 237);
+        this->addColor("berlin-3", 100, 166, 225);
+        this->addColor("berlin-4", 81, 159, 211);
+        this->addColor("berlin-5", 64, 147, 192);
+        this->addColor("berlin-6", 53, 133, 172);
+        this->addColor("berlin-7", 46, 118, 153);
+        this->addColor("berlin-8", 39, 103, 133);
+        this->addColor("berlin-9", 34, 89, 115);
+        this->addColor("berlin-10", 29, 74, 96);
+        this->addColor("berlin-11", 23, 61, 79);
+        this->addColor("berlin-12", 19, 48, 62);
+        this->addColor("berlin-13", 16, 36, 46);
+        this->addColor("berlin-14", 16, 25, 31);
+        this->addColor("berlin-15", 18, 17, 19);
+        this->addColor("berlin-16", 25, 11, 8);
+        this->addColor("berlin-17", 33, 11, 2);
+        this->addColor("berlin-18", 42, 13, 0);
+        this->addColor("berlin-19", 53, 15, 0);
+        this->addColor("berlin-20", 64, 18, 0);
+        this->addColor("berlin-21", 76, 22, 2);
+        this->addColor("berlin-22", 91, 28, 7);
+        this->addColor("berlin-23", 107, 38, 17);
+        this->addColor("berlin-24", 125, 51, 30);
+        this->addColor("berlin-25", 142, 66, 46);
+        this->addColor("berlin-26", 158, 81, 63);
+        this->addColor("berlin-27", 173, 96, 80);
+        this->addColor("berlin-28", 189, 111, 99);
+        this->addColor("berlin-29", 206, 126, 117);
+        this->addColor("berlin-30", 223, 142, 136);
+        this->addColor("berlin-31", 239, 158, 156);
+        this->addColor("berlin-32", 254, 173, 173);
+        berlin.addScalarAndColor(16.0f / 16.0f, "berlin-32");
+        berlin.addScalarAndColor(15.0f / 16.0f, "berlin-31");
+        berlin.addScalarAndColor(14.0f / 16.0f, "berlin-30");
+        berlin.addScalarAndColor(13.0f / 16.0f, "berlin-29");
+        berlin.addScalarAndColor(12.0f / 16.0f, "berlin-28");
+        berlin.addScalarAndColor(11.0f / 16.0f, "berlin-27");
+        berlin.addScalarAndColor(10.0f / 16.0f, "berlin-26");
+        berlin.addScalarAndColor(9.0f / 16.0f, "berlin-25");
+        berlin.addScalarAndColor(8.0f / 16.0f, "berlin-24");
+        berlin.addScalarAndColor(7.0f / 16.0f, "berlin-23");
+        berlin.addScalarAndColor(6.0f / 16.0f, "berlin-22");
+        berlin.addScalarAndColor(5.0f / 16.0f, "berlin-21");
+        berlin.addScalarAndColor(4.0f / 16.0f, "berlin-20");
+        berlin.addScalarAndColor(3.0f / 16.0f, "berlin-19");
+        berlin.addScalarAndColor(2.0f / 16.0f, "berlin-18");
+        berlin.addScalarAndColor(1.0f / 16.0f, "berlin-17");
+        berlin.addScalarAndColor(0.0f, "berlin-16");
+        berlin.addScalarAndColor(-1.0f / 16.0f, "berlin-15");
+        berlin.addScalarAndColor(-2.0f / 16.0f, "berlin-14");
+        berlin.addScalarAndColor(-3.0f / 16.0f, "berlin-13");
+        berlin.addScalarAndColor(-4.0f / 16.0f, "berlin-12");
+        berlin.addScalarAndColor(-5.0f / 16.0f, "berlin-11");
+        berlin.addScalarAndColor(-6.0f / 16.0f, "berlin-10");
+        berlin.addScalarAndColor(-7.0f / 16.0f, "berlin-9");
+        berlin.addScalarAndColor(-8.0f / 16.0f, "berlin-8");
+        berlin.addScalarAndColor(-9.0f / 16.0f, "berlin-7");
+        berlin.addScalarAndColor(-10.0f / 16.0f, "berlin-6");
+        berlin.addScalarAndColor(-11.0f / 16.0f, "berlin-5");
+        berlin.addScalarAndColor(-12.0f / 16.0f, "berlin-4");
+        berlin.addScalarAndColor(-13.0f / 16.0f, "berlin-3");
+        berlin.addScalarAndColor(-14.0f / 16.0f, "berlin-2");
+        berlin.addScalarAndColor(-15.0f / 16.0f, "berlin-1");
+        berlin.addScalarAndColor(-16.0f / 16.0f, "berlin-0");
+        addPalette(berlin);
+    }
+
+    //Crameri managua diverging colormap (Fabio Crameri scientific colour maps, MIT license)
+    if (this->getPaletteByName("managua") == NULL) {
+        Palette managua;
+        managua.setName("managua");
+        this->addColor("managua-0", 255, 207, 103);
+        this->addColor("managua-1", 245, 191, 97);
+        this->addColor("managua-2", 235, 175, 92);
+        this->addColor("managua-3", 225, 160, 87);
+        this->addColor("managua-4", 215, 146, 82);
+        this->addColor("managua-5", 206, 133, 78);
+        this->addColor("managua-6", 196, 121, 74);
+        this->addColor("managua-7", 186, 109, 70);
+        this->addColor("managua-8", 176, 97, 66);
+        this->addColor("managua-9", 165, 86, 63);
+        this->addColor("managua-10", 153, 76, 60);
+        this->addColor("managua-11", 141, 65, 58);
+        this->addColor("managua-12", 128, 56, 57);
+        this->addColor("managua-13", 116, 48, 57);
+        this->addColor("managua-14", 104, 43, 59);
+        this->addColor("managua-15", 94, 40, 64);
+        this->addColor("managua-16", 86, 41, 73);
+        this->addColor("managua-17", 81, 44, 84);
+        this->addColor("managua-18", 77, 51, 98);
+        this->addColor("managua-19", 75, 60, 113);
+        this->addColor("managua-20", 75, 70, 128);
+        this->addColor("managua-21", 77, 82, 143);
+        this->addColor("managua-22", 80, 94, 157);
+        this->addColor("managua-23", 83, 106, 169);
+        this->addColor("managua-24", 87, 118, 180);
+        this->addColor("managua-25", 92, 131, 190);
+        this->addColor("managua-26", 97, 143, 200);
+        this->addColor("managua-27", 102, 157, 209);
+        this->addColor("managua-28", 107, 171, 218);
+        this->addColor("managua-29", 112, 186, 227);
+        this->addColor("managua-30", 118, 201, 237);
+        this->addColor("managua-31", 123, 217, 246);
+        this->addColor("managua-32", 128, 231, 254);
+        managua.addScalarAndColor(16.0f / 16.0f, "managua-32");
+        managua.addScalarAndColor(15.0f / 16.0f, "managua-31");
+        managua.addScalarAndColor(14.0f / 16.0f, "managua-30");
+        managua.addScalarAndColor(13.0f / 16.0f, "managua-29");
+        managua.addScalarAndColor(12.0f / 16.0f, "managua-28");
+        managua.addScalarAndColor(11.0f / 16.0f, "managua-27");
+        managua.addScalarAndColor(10.0f / 16.0f, "managua-26");
+        managua.addScalarAndColor(9.0f / 16.0f, "managua-25");
+        managua.addScalarAndColor(8.0f / 16.0f, "managua-24");
+        managua.addScalarAndColor(7.0f / 16.0f, "managua-23");
+        managua.addScalarAndColor(6.0f / 16.0f, "managua-22");
+        managua.addScalarAndColor(5.0f / 16.0f, "managua-21");
+        managua.addScalarAndColor(4.0f / 16.0f, "managua-20");
+        managua.addScalarAndColor(3.0f / 16.0f, "managua-19");
+        managua.addScalarAndColor(2.0f / 16.0f, "managua-18");
+        managua.addScalarAndColor(1.0f / 16.0f, "managua-17");
+        managua.addScalarAndColor(0.0f, "managua-16");
+        managua.addScalarAndColor(-1.0f / 16.0f, "managua-15");
+        managua.addScalarAndColor(-2.0f / 16.0f, "managua-14");
+        managua.addScalarAndColor(-3.0f / 16.0f, "managua-13");
+        managua.addScalarAndColor(-4.0f / 16.0f, "managua-12");
+        managua.addScalarAndColor(-5.0f / 16.0f, "managua-11");
+        managua.addScalarAndColor(-6.0f / 16.0f, "managua-10");
+        managua.addScalarAndColor(-7.0f / 16.0f, "managua-9");
+        managua.addScalarAndColor(-8.0f / 16.0f, "managua-8");
+        managua.addScalarAndColor(-9.0f / 16.0f, "managua-7");
+        managua.addScalarAndColor(-10.0f / 16.0f, "managua-6");
+        managua.addScalarAndColor(-11.0f / 16.0f, "managua-5");
+        managua.addScalarAndColor(-12.0f / 16.0f, "managua-4");
+        managua.addScalarAndColor(-13.0f / 16.0f, "managua-3");
+        managua.addScalarAndColor(-14.0f / 16.0f, "managua-2");
+        managua.addScalarAndColor(-15.0f / 16.0f, "managua-1");
+        managua.addScalarAndColor(-16.0f / 16.0f, "managua-0");
+        addPalette(managua);
+    }
+
+    //matplotlib jet (classic blue-cyan-green-yellow-red), 32-entry LUT
+    //Copyright (c) 2012-2015 Matplotlib Development Team; All Rights Reserved
+    if (this->getPaletteByName("jet") == NULL) {
+        Palette jet;
+        jet.setName("jet");
+        this->addColor("jet-black", 0, 0, 127);//low / negative
+        this->addColor("jet-1", 0, 0, 127);
+        this->addColor("jet-2", 0, 0, 163);
+        this->addColor("jet-3", 0, 0, 200);
+        this->addColor("jet-4", 0, 0, 236);
+        this->addColor("jet-5", 0, 4, 255);
+        this->addColor("jet-6", 0, 36, 255);
+        this->addColor("jet-7", 0, 68, 255);
+        this->addColor("jet-8", 0, 100, 255);
+        this->addColor("jet-9", 0, 136, 255);
+        this->addColor("jet-10", 0, 168, 255);
+        this->addColor("jet-11", 0, 200, 255);
+        this->addColor("jet-12", 2, 232, 244);
+        this->addColor("jet-13", 31, 255, 215);
+        this->addColor("jet-14", 57, 255, 189);
+        this->addColor("jet-15", 83, 255, 163);
+        this->addColor("jet-16", 108, 255, 137);
+        this->addColor("jet-17", 137, 255, 108);
+        this->addColor("jet-18", 163, 255, 83);
+        this->addColor("jet-19", 189, 255, 57);
+        this->addColor("jet-20", 215, 255, 31);
+        this->addColor("jet-21", 244, 248, 2);
+        this->addColor("jet-22", 255, 218, 0);
+        this->addColor("jet-23", 255, 189, 0);
+        this->addColor("jet-24", 255, 159, 0);
+        this->addColor("jet-25", 255, 126, 0);
+        this->addColor("jet-26", 255, 96, 0);
+        this->addColor("jet-27", 255, 66, 0);
+        this->addColor("jet-28", 255, 37, 0);
+        this->addColor("jet-29", 236, 3, 0);
+        this->addColor("jet-30", 200, 0, 0);
+        this->addColor("jet-31", 163, 0, 0);
+        this->addColor("jet-32", 127, 0, 0);
+        jet.addScalarAndColor(32.0f / 32.0f, "jet-32");
+        jet.addScalarAndColor(31.0f / 32.0f, "jet-31");
+        jet.addScalarAndColor(30.0f / 32.0f, "jet-30");
+        jet.addScalarAndColor(29.0f / 32.0f, "jet-29");
+        jet.addScalarAndColor(28.0f / 32.0f, "jet-28");
+        jet.addScalarAndColor(27.0f / 32.0f, "jet-27");
+        jet.addScalarAndColor(26.0f / 32.0f, "jet-26");
+        jet.addScalarAndColor(25.0f / 32.0f, "jet-25");
+        jet.addScalarAndColor(24.0f / 32.0f, "jet-24");
+        jet.addScalarAndColor(23.0f / 32.0f, "jet-23");
+        jet.addScalarAndColor(22.0f / 32.0f, "jet-22");
+        jet.addScalarAndColor(21.0f / 32.0f, "jet-21");
+        jet.addScalarAndColor(20.0f / 32.0f, "jet-20");
+        jet.addScalarAndColor(19.0f / 32.0f, "jet-19");
+        jet.addScalarAndColor(18.0f / 32.0f, "jet-18");
+        jet.addScalarAndColor(17.0f / 32.0f, "jet-17");
+        jet.addScalarAndColor(16.0f / 32.0f, "jet-16");
+        jet.addScalarAndColor(15.0f / 32.0f, "jet-15");
+        jet.addScalarAndColor(14.0f / 32.0f, "jet-14");
+        jet.addScalarAndColor(13.0f / 32.0f, "jet-13");
+        jet.addScalarAndColor(12.0f / 32.0f, "jet-12");
+        jet.addScalarAndColor(11.0f / 32.0f, "jet-11");
+        jet.addScalarAndColor(10.0f / 32.0f, "jet-10");
+        jet.addScalarAndColor(9.0f / 32.0f, "jet-9");
+        jet.addScalarAndColor(8.0f / 32.0f, "jet-8");
+        jet.addScalarAndColor(7.0f / 32.0f, "jet-7");
+        jet.addScalarAndColor(6.0f / 32.0f, "jet-6");
+        jet.addScalarAndColor(5.0f / 32.0f, "jet-5");
+        jet.addScalarAndColor(4.0f / 32.0f, "jet-4");
+        jet.addScalarAndColor(3.0f / 32.0f, "jet-3");
+        jet.addScalarAndColor(2.0f / 32.0f, "jet-2");
+        jet.addScalarAndColor(1.0f / 32.0f, "jet-1");
+        jet.addScalarAndColor(0.0f, "jet-black");
+        jet.addScalarAndColor(-1.0f, "jet-black");
+        addPalette(jet);
+    }
+
+
     if (this->getPaletteByName("JET256") == NULL) {
         Palette JET256;
         JET256.setName("JET256");
@@ -1704,6 +2152,128 @@ PaletteFile::addDefaultPalettes()
         rgbVolumePalette.addScalarAndColor(-0.333f, redName);
         
         addPalette(rgbVolumePalette);
+    }
+
+    // Nilearn colormaps from nilearn/plotting/cm.py.
+    if (this->getPaletteByName("black_red") == NULL) {
+        Palette blackRed;
+        blackRed.setName("black_red");
+        addPaletteScalarAndColor(blackRed,  1.0f,      255, 255, 255);
+        addPaletteScalarAndColor(blackRed,  0.746032f, 255, 255,   0);
+        addPaletteScalarAndColor(blackRed,  0.365079f, 255,   0,   0);
+        addPaletteScalarAndColor(blackRed,  0.0f,       11,   0,   0);
+        addPaletteScalarAndColor(blackRed, -1.0f,       11,   0,   0);
+        addPalette(blackRed);
+    }
+
+    if (this->getPaletteByName("cold_white_hot") == NULL) {
+        Palette coldWhiteHot;
+        coldWhiteHot.setName("cold_white_hot");
+        addPaletteScalarAndColor(coldWhiteHot,  1.0f,       11,   0,   0);
+        addPaletteScalarAndColor(coldWhiteHot,  0.634921f, 255,   0,   0);
+        addPaletteScalarAndColor(coldWhiteHot,  0.253968f, 255, 255,   0);
+        addPaletteScalarAndColor(coldWhiteHot,  0.0f,      255, 255, 255);
+        addPaletteScalarAndColor(coldWhiteHot, -0.253968f,   0, 255, 255);
+        addPaletteScalarAndColor(coldWhiteHot, -0.634921f,   0,   0, 255);
+        addPaletteScalarAndColor(coldWhiteHot, -1.0f,        0,   0,  11);
+        addPalette(coldWhiteHot);
+    }
+
+    if (this->getPaletteByName("black_green") == NULL) {
+        Palette blackGreen;
+        blackGreen.setName("black_green");
+        addPaletteScalarAndColor(blackGreen,  1.0f,      255, 255, 255);
+        addPaletteScalarAndColor(blackGreen,  0.746032f, 255, 255,   0);
+        addPaletteScalarAndColor(blackGreen,  0.365079f,   0, 255,   0);
+        addPaletteScalarAndColor(blackGreen,  0.0f,        0,  11,   0);
+        addPaletteScalarAndColor(blackGreen, -1.0f,        0,  11,   0);
+        addPalette(blackGreen);
+    }
+
+    if (this->getPaletteByName("black_blue") == NULL) {
+        Palette blackBlue;
+        blackBlue.setName("black_blue");
+        addPaletteScalarAndColor(blackBlue,  1.0f,      255, 255, 255);
+        addPaletteScalarAndColor(blackBlue,  0.746032f,   0, 255, 255);
+        addPaletteScalarAndColor(blackBlue,  0.365079f,   0,   0, 255);
+        addPaletteScalarAndColor(blackBlue,  0.0f,        0,   0,  11);
+        addPaletteScalarAndColor(blackBlue, -1.0f,        0,   0,  11);
+        addPalette(blackBlue);
+    }
+
+    if (this->getPaletteByName("hot_white_bone") == NULL) {
+        Palette hotWhiteBone;
+        hotWhiteBone.setName("hot_white_bone");
+        addPaletteScalarAndColor(hotWhiteBone,  1.0f,        0,   0,   0);
+        addPaletteScalarAndColor(hotWhiteBone,  0.817461f,  81,  81, 113);
+        addPaletteScalarAndColor(hotWhiteBone,  0.626984f, 166, 198, 198);
+        addPaletteScalarAndColor(hotWhiteBone,  0.5f,      255, 255, 255);
+        addPaletteScalarAndColor(hotWhiteBone,  0.444444f, 255, 255, 198);
+        addPaletteScalarAndColor(hotWhiteBone,  0.388889f, 255, 255, 142);
+        addPaletteScalarAndColor(hotWhiteBone,  0.333333f, 255, 212,  85);
+        addPaletteScalarAndColor(hotWhiteBone,  0.277778f, 255, 156,  28);
+        addPaletteScalarAndColor(hotWhiteBone,  0.222222f, 227,  99,   0);
+        addPaletteScalarAndColor(hotWhiteBone,  0.166667f, 170,  43,   0);
+        addPaletteScalarAndColor(hotWhiteBone,  0.111111f, 113,   0,   0);
+        addPaletteScalarAndColor(hotWhiteBone,  0.055556f,  57,   0,   0);
+        addPaletteScalarAndColor(hotWhiteBone,  0.0f,        0,   0,   0);
+        addPaletteScalarAndColor(hotWhiteBone, -1.0f,        0,   0,   0);
+        addPalette(hotWhiteBone);
+    }
+
+    if (this->getPaletteByName("ocean_hot") == NULL) {
+        Palette oceanHot;
+        oceanHot.setName("ocean_hot");
+        addPaletteScalarAndColor(oceanHot,  1.0f,        11,   0,   0);
+        addPaletteScalarAndColor(oceanHot,  0.817461f, 255,   0,   0);
+        addPaletteScalarAndColor(oceanHot,  0.626984f, 255, 255,   0);
+        addPaletteScalarAndColor(oceanHot,  0.5f,      255, 255, 255);
+        addPaletteScalarAndColor(oceanHot,  0.444444f, 170, 212, 227);
+        addPaletteScalarAndColor(oceanHot,  0.388889f,  85, 170, 198);
+        addPaletteScalarAndColor(oceanHot,  0.333333f,   0, 127, 170);
+        addPaletteScalarAndColor(oceanHot,  0.277778f,   0,  85, 142);
+        addPaletteScalarAndColor(oceanHot,  0.222222f,   0,  42, 113);
+        addPaletteScalarAndColor(oceanHot,  0.166667f,   0,   0,  85);
+        addPaletteScalarAndColor(oceanHot,  0.111111f,   0,  43,  57);
+        addPaletteScalarAndColor(oceanHot,  0.055556f,   0,  85,  28);
+        addPaletteScalarAndColor(oceanHot,  0.0f,        0, 128,   0);
+        addPaletteScalarAndColor(oceanHot, -1.0f,        0, 128,   0);
+        addPalette(oceanHot);
+    }
+
+    // Softer ends than cold_white_hot: dark red / dark blue instead of near-black.
+    if (this->getPaletteByName("cold_white_hot_soft") == NULL) {
+        Palette coldWhiteHotSoft;
+        coldWhiteHotSoft.setName("cold_white_hot_soft");
+        addPaletteScalarAndColor(coldWhiteHotSoft,  1.0f,      180,   0,   0);
+        addPaletteScalarAndColor(coldWhiteHotSoft,  0.634921f, 255,   0,   0);
+        addPaletteScalarAndColor(coldWhiteHotSoft,  0.253968f, 255, 255,   0);
+        addPaletteScalarAndColor(coldWhiteHotSoft,  0.0f,      255, 255, 255);
+        addPaletteScalarAndColor(coldWhiteHotSoft, -0.253968f,   0, 255, 255);
+        addPaletteScalarAndColor(coldWhiteHotSoft, -0.634921f,   0,   0, 255);
+        addPaletteScalarAndColor(coldWhiteHotSoft, -1.0f,        0,  60, 180);
+        addPalette(coldWhiteHotSoft);
+    }
+
+    // Softer ends than hot_white_bone: dark gray / dark red instead of black.
+    if (this->getPaletteByName("hot_white_bone_soft") == NULL) {
+        Palette hotWhiteBoneSoft;
+        hotWhiteBoneSoft.setName("hot_white_bone_soft");
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  1.0f,       90,  90, 110);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.817461f,  81,  81, 113);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.626984f, 166, 198, 198);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.5f,      255, 255, 255);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.444444f, 255, 255, 198);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.388889f, 255, 255, 142);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.333333f, 255, 212,  85);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.277778f, 255, 156,  28);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.222222f, 227,  99,   0);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.166667f, 170,  43,   0);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.111111f, 113,   0,   0);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.055556f,  57,   0,   0);
+        addPaletteScalarAndColor(hotWhiteBoneSoft,  0.0f,      100,  25,   0);
+        addPaletteScalarAndColor(hotWhiteBoneSoft, -1.0f,      120,  35,   0);
+        addPalette(hotWhiteBoneSoft);
     }
     
     if (modifiedStatus == false) {
